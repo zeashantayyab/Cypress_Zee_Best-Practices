@@ -1,18 +1,14 @@
 const { defineConfig } = require('cypress')
 
 module.exports = defineConfig({
+  projectId: "aixo8e",
   defaultCommandTimeout: 6000,
-  retries: 1,
-  // retries: {
-  //   runMode: 2,
-  //   openMode: 1,
-  // },
-
+  experimentalWebKitSupport: true,
+  
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
+    // baseUrl: 'https://www.letskodeit.com',
     setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config)
+      // return require('./cypress/plugins/index.js')(on, config)
     },
   },
 })
